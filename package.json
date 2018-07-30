@@ -43,25 +43,26 @@
     "json-file-plus": "^3.2.0",
     "package-json": "^2.3.1",
     "passport": "^0.3.2",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "snyk": "^1.89.1"
   },
   "devDependencies": {
-    "babel-core": "~5.8.12",
+    "babel-core": "~6.10.4",
     "babel-eslint": "^7.2.3",
-    "babel-loader": "~5.3.0",
+    "babel-loader": "~6.0.0",
     "babel-plugin-remove-proptypes": "~1.0.0",
     "babel-polyfill": "^6.7.2",
     "babel-runtime": "~5.8.25",
     "css-loader": "~0.18.0",
-    "eslint": "^3.8.1",
+    "eslint": "^4.18.2",
     "eslint-plugin-jest": "^20.0.3",
     "eslint-plugin-react": "^6.4.1",
     "file-loader": "^0.8.5",
     "history": "^2.1.2",
-    "http-server": "~0.8.5",
+    "http-server": "~0.10.0",
     "immutable": "~3.7.5",
     "immutable-devtools": "~0.0.4",
-    "jest-cli": "^12.0.2",
+    "jest-cli": "^19.0.0",
     "js-beautify": "~1.5.0",
     "marked": "^0.3.5",
     "node-sass": "^3.7.0",
@@ -70,7 +71,7 @@
     "react": "^15.0.1",
     "react-addons-test-utils": "^15.0.1",
     "react-dnd": "~2.1.4",
-    "react-dnd-html5-backend": "~2.0.0",
+    "react-dnd-html5-backend": "~2.1.0",
     "react-dom": "^15.0.1",
     "react-router": "^2.6.0",
     "request-promise": "^4.1.1",
@@ -78,7 +79,7 @@
     "style-loader": "~0.12.3",
     "svg-prep": "~1.0.0",
     "transform-jest-deps": "^2.1.0",
-    "webpack": "~1.12.0"
+    "webpack": "~2.2.0"
   },
   "scripts": {
     "dev": "node ./Parse-Dashboard/index.js & webpack --config webpack/build.config.js --devtool eval-source-map --progress --watch",
@@ -90,7 +91,9 @@
     "pretest": "npm run lint",
     "generate": "node scripts/generate.js",
     "prepublish": "webpack --config webpack/publish.config.js",
-    "start": "node ./Parse-Dashboard/index.js"
+    "start": "node ./Parse-Dashboard/index.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "bin": {
     "parse-dashboard": "./bin/parse-dashboard"
@@ -114,5 +117,6 @@
       "react-addons-test-utils",
       "fbjs"
     ]
-  }
+  },
+  "snyk": true
 }

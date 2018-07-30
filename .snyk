@@ -1,0 +1,28 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.12.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:hoek:20180212':
+    - node-sass > node-gyp > request > hawk > hoek:
+        patched: '2018-07-30T05:12:42.816Z'
+    - node-sass > node-gyp > request > hawk > boom > hoek:
+        patched: '2018-07-30T05:12:42.816Z'
+    - node-sass > node-gyp > request > hawk > sntp > hoek:
+        patched: '2018-07-30T05:12:42.816Z'
+    - node-sass > node-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-07-30T05:12:42.816Z'
+  'npm:lodash:20180130':
+    - babel-core > babel-plugin-proto-to-assign > lodash:
+        patched: '2018-07-30T05:12:42.816Z'
+    - babel-loader > babel-core > babel-plugin-proto-to-assign > lodash:
+        patched: '2018-07-30T05:12:42.816Z'
+    - babel-plugin-remove-proptypes > babel-core > babel-plugin-proto-to-assign > lodash:
+        patched: '2018-07-30T05:12:42.816Z'
+    - babel-plugin-remove-proptypes > babel-core > lodash:
+        patched: '2018-07-30T05:12:42.816Z'
+    - transform-jest-deps > lodash:
+        patched: '2018-07-30T05:12:42.816Z'
+  'npm:minimatch:20160620':
+    - babel-plugin-remove-proptypes > babel-core > minimatch:
+        patched: '2018-07-30T05:12:42.816Z'
