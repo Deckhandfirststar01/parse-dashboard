@@ -44,7 +44,7 @@
     "package-json": "^2.3.1",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
-    "snyk": "^1.89.1"
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "babel-core": "~6.10.4",
@@ -90,7 +90,7 @@
     "lint": "eslint . --ignore-path .gitignore --cache",
     "pretest": "npm run lint",
     "generate": "node scripts/generate.js",
-    "prepublish": "webpack --config webpack/publish.config.js",
+    "prepublish": "npm run snyk-protect; webpack --config webpack/publish.config.js",
     "start": "node ./Parse-Dashboard/index.js",
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect"
