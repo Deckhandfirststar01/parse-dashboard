@@ -44,7 +44,7 @@
     "package-json": "^2.3.1",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
-    "snyk": "^1.89.1"
+    "snyk": "^1.231.0"
   },
   "devDependencies": {
     "babel-core": "~6.10.4",
